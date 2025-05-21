@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+
+.calculator-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.calculator {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 320px;
+}
+
+.history-panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.history-header h3 {
+  color: #1971c2;
+  font-size: 18px;
+}
+
+.clear-history-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.clear-history-btn:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+.history-list {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.history-item {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+  color: #495057;
+}
+
+.history-item:hover {
+  background: #f8f9fa;
+}
+
+.display {
+  margin-bottom: 20px;
+}
+
+#result {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background: #f8f9fa;
+  font-size: 24px;
+  text-align: right;
+  padding: 0 20px;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #e9ecef;
+}
+
+.operator {
+  background: #e9ecef;
+  color: #1971c2;
+}
+
+.operator:hover {
+  background: #1971c2;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(25, 113, 194, 0.3);
+}
+
+.equal {
+  background: #1971c2;
+  color: white;
+  grid-column: span 2;
+}
+
+.equal:hover {
+  background: #1864ab;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(24, 100, 171, 0.3);
+}
